@@ -14,7 +14,7 @@ class SendEmailContacFormService {
     })
 
     await transporter.sendMail({
-      from: '"Blog - Builder Seu Negocio Online" <contato@builderseunegocioonline.com.br>',
+      from: '"Blog - Oficina Mecânica Online" <contato@builderseunegocioonline.com.br>',
       to: 'gabriel.bastiani@hotmail.com.br',
       subject: "Mensagem recebida no Blog",
       html: `<div style="background-color: rgb(223, 145, 0); color: black; padding: 0 55px;">
@@ -27,7 +27,7 @@ class SendEmailContacFormService {
             </article>
             
             <div style="background-color: rgb(223, 145, 0); color: black; padding: 0 55px;">
-                <h5>Blog Builder Seu Negocio Online</h5>
+                <h5>Blog Oficina Mecânica Online</h5>
             </div>`,
     });
 
