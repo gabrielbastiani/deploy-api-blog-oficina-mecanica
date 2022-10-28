@@ -39,6 +39,7 @@ class AdminCreateUserService {
         email: email,
         password: passwordHash,
         role: Role.ADMIN,
+        authenticated: true
       },
       select: {
         id: true,
