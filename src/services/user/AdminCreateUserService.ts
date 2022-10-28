@@ -55,7 +55,7 @@ class AdminCreateUserService {
       port: 587,
       auth: {
         user: "contato@builderseunegocioonline.com",
-        pass: "5c6673f3"
+        pass: "aebc5536"
       }
     })
 
