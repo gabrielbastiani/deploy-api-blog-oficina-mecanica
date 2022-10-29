@@ -22,7 +22,7 @@ class EmailExportNewslattersService {
                 port: 587,
                 auth: {
                     user: "contato@builderseunegocioonline.com",
-                    pass: "aebc5536"
+                    pass: "c7750326"
                 }
             });
             yield transporter.sendMail({
