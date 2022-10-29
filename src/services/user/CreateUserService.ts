@@ -50,10 +50,10 @@ class CreateUserService {
     })
 
     const transporter = nodemailer.createTransport({
-      host: "smart.iagentesmtp.com.br",
+      host: process.env.HOST_SMTP,
       port: 587,
       auth: {
-        user: "contato@builderseunegocioonline.com",
+        user: process.env.USER_SMTP,
         pass: process.env.PASS_SMTP
       }
     })

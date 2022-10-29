@@ -2,6 +2,8 @@ import prismaClient from '../../prisma';
 const CronJob = require('cron').CronJob;
 import moment from 'moment';
 import nodemailer from "nodemailer";
+require('dotenv/config');
+
 
 interface ArticleRequest {
     publishDate: string;
@@ -46,13 +48,13 @@ class AllDatePublisheService {
                 });
 
                 const transporter = nodemailer.createTransport({
-                    host: "smart.iagentesmtp.com.br",
+                    host: process.env.HOST_SMTP,
                     port: 587,
                     auth: {
-                        user: "contato@builderseunegocioonline.com",
-                        pass: "3333333333333"
+                      user: process.env.USER_SMTP,
+                      pass: process.env.PASS_SMTP
                     }
-                })
+                  })
 
                 await transporter.sendMail({
                     from: '"Blog - Oficina Mecânica Online" <contato@builderseunegocioonline.com.br>',
