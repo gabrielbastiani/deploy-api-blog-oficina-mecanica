@@ -133,7 +133,7 @@ import uploadConfig from './config/multer';
 
 
 const router = Router();
-const upload = multer(uploadConfig.upload("/imgblog"));
+const upload = multer(uploadConfig.upload("./imgblog"));
 
 
 
