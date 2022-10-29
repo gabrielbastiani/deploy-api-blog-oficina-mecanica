@@ -30,7 +30,7 @@ class AllDatePublisheService {
         const job = new CronJob('0 * * * * *', async () => {
 
             const nowDate = new Date();
-            const dateNow = new Intl.DateTimeFormat('pt-BR', {dateStyle: 'short', timeStyle: 'short'}).format(nowDate);
+            const dateNow = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'short', timeStyle: 'short' }).format(nowDate);
 
             console.log("Data atual:", dateNow)
 
@@ -51,10 +51,10 @@ class AllDatePublisheService {
                     host: process.env.HOST_SMTP,
                     port: 587,
                     auth: {
-                      user: process.env.USER_SMTP,
-                      pass: process.env.PASS_SMTP
+                        user: process.env.USER_SMTP,
+                        pass: process.env.PASS_SMTP
                     }
-                  })
+                })
 
                 await transporter.sendMail({
                     from: '"Blog - Oficina Mecânica Online" <contato@builderseunegocioonline.com.br>',
