@@ -1,6 +1,7 @@
 import prismaClient from '../../prisma'
 import { hash } from 'bcryptjs'
 import nodemailer from "nodemailer";
+require('dotenv/config');
 
 
 interface UserRequest {
@@ -53,7 +54,7 @@ class CreateUserService {
       port: 587,
       auth: {
         user: "contato@builderseunegocioonline.com",
-        pass: "3333333333333"
+        pass: process.env.PASS_SMTP
       }
     })
 
