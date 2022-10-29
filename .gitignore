@@ -122,6 +122,6 @@ out
 .pnp.*
 
 
-src/services/sendEmails
+EmailExportContactFormService.ts
 
-src/srvices/article/AllDatePublisheService.ts
+AllDatePublisheService.ts
