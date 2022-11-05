@@ -6,7 +6,7 @@ class SendEmailContacFormService {
 
     const transporter = nodemailer.createTransport({
       host: process.env.HOST_SMTP,
-      port: 587,
+      port: 465,
       auth: {
         user: process.env.USER_SMTP,
         pass: process.env.PASS_SMTP
@@ -14,7 +14,7 @@ class SendEmailContacFormService {
     })
 
     await transporter.sendMail({
-      from: '"Blog - Oficina Mecânica Online" <contato@builderseunegocioonline.com.br>',
+      from: '"Blog - Oficina Mecânica Online" <contato.graxa@oficinamecanicaonline.com>',
       to: 'gabriel.bastiani@hotmail.com.br',
       subject: "Mensagem recebida no Blog",
       html: `<div style="background-color: rgb(223, 145, 0); color: black; padding: 0 55px;">

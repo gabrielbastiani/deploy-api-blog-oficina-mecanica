@@ -51,7 +51,7 @@ class CreateUserService {
 
     const transporter = nodemailer.createTransport({
       host: process.env.HOST_SMTP,
-      port: 587,
+      port: 465,
       auth: {
         user: process.env.USER_SMTP,
         pass: process.env.PASS_SMTP
@@ -59,7 +59,7 @@ class CreateUserService {
     })
 
     await transporter.sendMail({
-      from: "'Blog - Oficina Mecânica Online' <contato@builderseunegocioonline.com.br>",
+      from: "'Blog - Oficina Mecânica Online' <contato.graxa@oficinamecanicaonline.com>",
       to: user.email,
       subject: "Confirme seu cadastro de usuario no Blog",
       html: `<div style="background-color: rgb(223, 145, 0); color: black; padding: 0 55px;">
@@ -77,7 +77,7 @@ class CreateUserService {
     });
 
     await transporter.sendMail({
-      from: "'Blog - Oficina Mecânica Online' <contato@builderseunegocioonline.com.br>",
+      from: "'Blog - Oficina Mecânica Online' <contato.graxa@oficinamecanicaonline.com>",
       to: "gabriel.bastiani@hotmail.com.br",
       subject: "Novo usúario se cadastrando no blog",
       html: `<div style="background-color: rgb(223, 145, 0); color: black; padding: 0 55px;">

@@ -20,14 +20,14 @@ class SendEmailNewsService {
         return __awaiter(this, void 0, void 0, function* () {
             const transporter = nodemailer_1.default.createTransport({
                 host: process.env.HOST_SMTP,
-                port: 587,
+                port: 465,
                 auth: {
                     user: process.env.USER_SMTP,
                     pass: process.env.PASS_SMTP
                 }
             });
             yield transporter.sendMail({
-                from: '"Blog - Oficina Mecânica Online" <contato@builderseunegocioonline.com.br>',
+                from: '"Blog - Oficina Mecânica Online" <contato.graxa@oficinamecanicaonline.com>',
                 to: 'gabriel.bastiani@hotmail.com.br',
                 subject: "Novo contato em sua Newslatter",
                 html: `<div style="background-color: rgb(223, 145, 0); color: black; padding: 0 55px;">
